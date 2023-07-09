@@ -33,7 +33,7 @@ export default function Root() {
 		<>
 				<header className="flex flex-row justify-between p-4">
 					<Link
-						to="/posts"
+						to="./posts"
 						className="text-fuchsia-700 text-3xl font-bold"
 					>
 						Picasso blog

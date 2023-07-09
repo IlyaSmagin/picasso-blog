@@ -21,7 +21,7 @@ export default function Post() {
 						{post.title}
 					</h1>
 
-					<Link to={`/posts/?userId=${user.id}`}>
+					<Link to={`../posts/?userId=${user.id}`}>
 						Post by {user.name}{" "}
 						<span className="text-gray-600">@{user.username}</span>
 					</Link>

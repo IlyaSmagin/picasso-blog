@@ -11,7 +11,7 @@ import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "picasso-blog/",
 		element: <Root />,
 		errorElement: <ErrorPage />,
 		loader: usersLoader,
