@@ -11,19 +11,19 @@ import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "picasso-blog/",
+		path: "picasso-blog/posts",
 		element: <Root />,
 		errorElement: <ErrorPage />,
 		loader: usersLoader,
 		action: rootAction,
 		children: [
 			{
-				path: "posts",
+				index: true,
 				element: <PostFeed />,
 				loader: postsLoader,
 			},
 			{
-				path: "posts/:postId",
+				path: ":postId",
 				element: <Post />,
 				action: commentsAction,
 				loader: postLoader,

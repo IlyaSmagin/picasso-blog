@@ -18,9 +18,9 @@ export async function action({ request }) {
 	const formData = await request.formData();
 	const filterId = formData.get("userId");
 	if (filterId === "0") {
-		return redirect("./posts");
+		return redirect("./");
 	} else {
-		return redirect(`posts/?userId=${filterId}`);
+		return redirect(`./?userId=${filterId}`);
 	}
 }
 
@@ -33,7 +33,7 @@ export default function Root() {
 		<>
 			<header className="flex flex-row justify-between p-4">
 				<Link
-					to="./posts"
+					to="./"
 					className="text-fuchsia-700 text-3xl font-bold"
 				>
 					Picasso blog
