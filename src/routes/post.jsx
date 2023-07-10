@@ -7,7 +7,7 @@ import CommentSection from "../components/CommentSection";
 export async function postLoader({ params }) {
 	const post = await getPost(params.postId.toString());
 	const user = await getUser(post.userId);
-	const comments = await getComments();
+	const comments = await getComments(post.id);
 	return { post, user, comments };
 }
 
@@ -33,8 +33,6 @@ export default function Post() {
 					<p className="mb-3 text-lg">{post.body}</p>
 					<p className="mb-3 text-lg">{post.body}</p>
 					<p className="mb-3 text-lg">{post.body}</p>
-
-
 				</article>
 				<aside className="md:w-1/3 w-11/12 mx-auto">
 					<CommentSection comments={comments} />

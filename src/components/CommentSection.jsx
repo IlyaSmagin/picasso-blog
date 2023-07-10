@@ -1,7 +1,6 @@
 import { Form } from "react-router-dom";
 export async function commentsAction({ request, params }) {
 	const formData = await request.formData();
-	console.log(formData, params);
 	const response = await fetch(
 		`https://jsonplaceholder.typicode.com/posts/${params.postId}/comments`,
 		{
@@ -19,7 +18,7 @@ export async function commentsAction({ request, params }) {
 		}
 	);
 	const res = await response.json();
-	console.log("Comment send:",res);
+	console.log("Comment send:", res);
 	return res;
 }
 

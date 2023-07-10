@@ -11,14 +11,14 @@ import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "picasso-blog/posts",
+		path: "/picasso-blog",
 		element: <Root />,
 		errorElement: <ErrorPage />,
 		loader: usersLoader,
 		action: rootAction,
 		children: [
 			{
-				index: true,
+				path: "",
 				element: <PostFeed />,
 				loader: postsLoader,
 			},
